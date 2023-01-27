@@ -33,11 +33,13 @@ package HomeWork4;
                     if (i % 50 == 0) {
                         System.out.println("breathe in");
                     } 
-                    try {
-					Thread.sleep(10);
-				} catch (InterruptedException exception) {
-				} 
-                    if (i % 100 == 0) {
+			
+			
+                    try {   Thread.sleep(5);  } 
+		   catch (InterruptedException exception) {   } 
+                    
+			
+			if (i % 100 == 0) {
                         System.out.println("breathe out");
                     }
                 }
