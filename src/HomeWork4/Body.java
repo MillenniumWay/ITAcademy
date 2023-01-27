@@ -19,7 +19,7 @@ package HomeWork4;
         private class Heart {
 
             void live() {
-                for (int i = 0; i < 1000; i++) {
+                for (int i = 0; i < Integer.MAX_VALUE; i++) {
                     if (i % 100 == 0) {
                         System.out.println("Knock-knock-knockin' on heaven's door");
                     }
@@ -29,10 +29,14 @@ package HomeWork4;
 
         private class Lungs {
             void live() {
-                for (int i = 0; i < 500; i++) {
+                for (int i = 0; i < Integer.MAX_VALUE ; i++) {
                     if (i % 50 == 0) {
                         System.out.println("breathe in");
-                    }
+                    } 
+                    try {
+					Thread.sleep(10);
+				} catch (InterruptedException exception) {
+				} 
                     if (i % 100 == 0) {
                         System.out.println("breathe out");
                     }
