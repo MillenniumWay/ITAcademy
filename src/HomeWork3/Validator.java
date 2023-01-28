@@ -5,14 +5,9 @@ import java.util.regex.Pattern;
 public interface Validator {
 
 
-        Pattern getPattern ();
-        default
-            boolean validate (String str){
-            return getPattern().matcher(str).matches();
-        }
+    Pattern getPattern();
 
-
+    default boolean isValid(String s) {
+        return getPattern().matcher(s).matches();
     }
-
-
-
+}

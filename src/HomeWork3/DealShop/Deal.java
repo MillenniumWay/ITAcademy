@@ -2,6 +2,7 @@ package HomeWork3.DealShop;
 import java.util.ArrayList;
 import java.util.Scanner;
 public class Deal implements Info{
+
     public ArrayList<Product> products = new ArrayList<>();
     public ArrayList<Product> bucket = new ArrayList<>();
 
@@ -117,6 +118,10 @@ public class Deal implements Info{
         System.out.println("All price - " + all + " $ ");
         System.out.println("Money back  " + (back - all) + " $ ");
 
+    }
+
+    public void info () {
+        System.out.println("@Created by foolfy");
     }
 
     }

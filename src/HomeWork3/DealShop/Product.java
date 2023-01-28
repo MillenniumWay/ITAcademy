@@ -1,6 +1,6 @@
 package HomeWork3.DealShop;
 
-public class Product implements Info{
+public class Product{
     String name;
     double price;
     int quantity;
