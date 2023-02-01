@@ -7,13 +7,15 @@ public class User  extends Person{
 
     public String login;
     public int paswwrod;
-
-
-
     public String email;
 
-    public User(int age) {
-        super(age);
+
+
+
+    User  (String login, int paswwrod, String email) {
+        this.login = login;
+        this.paswwrod = paswwrod;
+        this.email = email;
     }
 
 
