@@ -8,7 +8,7 @@ public class TaskOne {
     public static void main(String[] args) {
         String path = "C:\\Users\\quali\\IdeaProjects\\HomeWork\\src\\HomeWork6\\FileTaskOne.txt";
 
-        System.out.println("Вводите текст с клавиатуры. Программа остановит запись после слова \"stop\":");
+        System.out.println("Введите текст, или напигите stop :");
         try (FileWriter writer = new FileWriter(path, false); Scanner scanner = new Scanner(System.in);) {
             while (true) {
                 String text = scanner.nextLine();
