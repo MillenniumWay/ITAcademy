@@ -4,6 +4,8 @@ import java.lang.reflect.InvocationTargetException;
 
 public class App {
     public static void main(String[] args) throws NoSuchMethodException, NoSuchFieldException, IllegalAccessException, IllegalArgumentException,NoSuchFieldException, InvocationTargetException {
+
+
         User user = new User("Login", 123, "ksda@mail.ru");
         Person person = new Person("lora", "Hooke", 23, 23.11);
 
@@ -21,6 +23,7 @@ public class App {
         dev.declaredFields(user,person,userClass, personClass);
 
         // 3 часть задания
+
         dev.setFieldForPerson(person,user,userClass, personClass);
         dev.setFieldForUser(person,user,userClass, personClass);
         dev.invoke(person,user,userClass, personClass);
