@@ -9,11 +9,13 @@ import java.util.Scanner;
 public class Settings {
 
     public static void start(Scanner scan, AirLineCompany airLineCompany, ArrayList<Airplane> airplanes, ArrayList<Airplane> userChoice) {
+        
+        System.out.println("Вы были перенаправлены в меню ");
         System.out.println("Доступные функции - 4 ");
         System.out.println("1 - Доступный самолеты для полета");
         System.out.println("2 - Общая вместительность и грузоподъемность ");
-        System.out.println("3 - Поиск самолета по заданному параметру потребления горючего (В разработке)  ");
-        System.out.println("Вы были перенаправлены в меню ");
+        System.out.println("3 - Поиск самолета по заданному параметру потребления горючего ");
+        System.out.println("4 - Вывод самолетов выбранных Вами из третьего кейса");
 
         while (true) {
             int swit = scan.nextInt();
