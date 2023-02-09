@@ -1,5 +1,5 @@
 package HomeWork7.Task1;
-
+import java.util.*;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Random;
