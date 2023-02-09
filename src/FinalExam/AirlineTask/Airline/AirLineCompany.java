@@ -3,22 +3,25 @@ package FinalExam.AirlineTask.Airline;
 import FinalExam.AirlineTask.Airline.AirPlanes.Airplane;
 
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Scanner;
-import java.util.stream.Collectors;
+import java.util.*;
 
 public class AirLineCompany {
-
+    // Коллекция объектов Авиаокомпании
     private ArrayList<Airplane> airplanes;
+    // Коллекция объетов пользователя
     private ArrayList<Airplane> userChoice;
 
-
+ public static final Comparator<Airplane> AIRPLANE_COMPARATOR = new Comparator<Airplane>() {
+     @Override
+     public int compare(Airplane o1, Airplane o2) {
+         return (int) (o1.getFlyingRange() - o2.getFlyingRange());
+     }
+ };
 
     // Вывод объектов колецкии
 
     public void AirPlanesForEach(ArrayList<Airplane> airplanes) {
+        Collections.sort(airplanes, AIRPLANE_COMPARATOR);
         airplanes.stream().forEach(x -> System.out.println(x.toString()));
     }
 
@@ -106,9 +109,8 @@ public class AirLineCompany {
     // Вывод колекции объектов выбранных Пользователям
 
     public void CollectUser (ArrayList<Airplane> userChoice) {
-
         System.out.println("Выбранные вами самолеты : ");
-
+        Collections.sort(userChoice, AIRPLANE_COMPARATOR);
         userChoice.stream().forEach(x-> System.out.println(x.toString()));
     }
 }
