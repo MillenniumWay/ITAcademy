@@ -13,14 +13,14 @@ public class Main {
 
          Map<Number, String> map;
 
-         map = Stream.generate(() -> new Random().nextLong(101)).limit(100)
-                 .map(i -> i * Math.PI - 20).filter(i -> i < 100)
-                 .sorted().skip(3).collect(Collectors.toMap
-                                (a -> a, b -> " : Number : " + b, (o1, o2) -> o1));
+       //  map = Stream.generate(() -> new Random().nextLong(101)).limit(100)
+         //        .map(i -> i * Math.PI - 20).filter(i -> i < 100)
+           //      .sorted().skip(3).collect(Collectors.toMap
+             //                   (a -> a, b -> " : Number : " + b, (o1, o2) -> o1));
 
-               for (Map.Entry<Number, String> entry : map.entrySet()) {
-                   System.out.println(entry);
-                   }
+      //         for (Map.Entry<Number, String> entry : map.entrySet()) {
+        //           System.out.println(entry);
+          //         }
 
 
          }

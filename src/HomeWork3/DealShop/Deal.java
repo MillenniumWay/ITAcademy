@@ -47,7 +47,7 @@ public class Deal implements Info{
         if (numObj == 3) {
             System.out.println("Введите колличество: ");
             int quantityOfObject3 = sc.nextInt();
-            if (quantityOfObject3 < 5 && quantityOfObject3 >= 1) {
+            if (quantityOfObject3 < 10 && quantityOfObject3 >= 1) {
                 bucket.add(new Product("Cheetos.Original", 1.99, quantityOfObject3, 2));
                 System.out.println("Вы успешно добавили продукт! ");
                 if ( quantityOfObject3 > 5) {
@@ -58,12 +58,13 @@ public class Deal implements Info{
         if (numObj == 4) {
             System.out.println("Введите колличество: ");
             int quantityOfObject4 = sc.nextInt();
-            if (quantityOfObject4 < 5 && quantityOfObject4 >= 1) {
-                bucket.add(new Product("Cheetos.Cheese", 2.99, quantityOfObject4, 2));
-                System.out.println("Вы успешно добавили продукт! ");
-                if ( quantityOfObject4 > 5) {
-                    System.out.println("В магазине нету столько товара!");
-                }
+            if ( quantityOfObject4 > 10) {
+                System.out.println("В магазине нету столько товара!");
+              }
+                if (quantityOfObject4 < 10 && quantityOfObject4 >= 1) {
+                   bucket.add(new Product("Cheetos.Cheese", 2.99, quantityOfObject4, 2));
+                     System.out.println("Вы успешно добавили продукт! ");
+
             }
         }
     }

@@ -1,6 +1,10 @@
 package HomeWork3.DealShop;
 import java.util.Scanner;
 public class Settings {
+    public static void method (String s) {
+        System.out.println("You there " + s);
+    }
+
         public static void start(Scanner scan, Deal deal) {
         System.out.println("Доступные функции - 4 " );
         System.out.println("1 - Показать товар доступный в магазине");
