@@ -36,17 +36,22 @@ public class AirLineCompany {
         for (int i = 0; i < airplanes.size(); i++) {
             allCapacity = allCapacity + airplanes.get(i).getLoadCapacity();
         }
+        
         for (int i = 0; i < airplanes.size(); i++) {
             allTounage = allTounage + airplanes.get(i).getTonnage();
         }
 
-        System.out.println("All Capacity: " + allCapacity + " " + " All Tounge: " + allTounage);
+        System.out.println("All Planes Capacity: " + allCapacity  +  " KG " + "  " +  " All Planes Tounge: " + allTounage + " Persons");
 
+        
     }
 
+    
+    
     // Подбор самолета ввиде кейса по параметру сжигаемого топлива 
     // Добавление выбранного самолета в отдельную коллекцию для пользователя
 
+    
     public void UserFuel(ArrayList<Airplane> airplanes, ArrayList<Airplane> userChoice) {
 
         Scanner scan = new Scanner(System.in);
