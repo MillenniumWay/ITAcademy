@@ -10,8 +10,11 @@ import java.util.Scanner;
 import java.util.stream.Collectors;
 
 public class AirLineCompany {
-
+    
+    // Основная коллекция объектов
     private ArrayList<Airplane> airplanes;
+    
+    // Пользовательская коллекция объектов
     private ArrayList<Airplane> userChoice;
 
 
@@ -23,7 +26,7 @@ public class AirLineCompany {
     }
 
 
-    // Вывод общей грузоподъемности и вместительности всехсамолетов в колекции
+    // Вывод общей грузоподъемности и вместительности всех самолетов в колекции
 
     public void CapacityAndTounge(ArrayList<Airplane> airplanes) {
 
@@ -41,14 +44,14 @@ public class AirLineCompany {
 
     }
 
-    // Подбор самолета ввиде кейса по параметру сжигаемого топлива
+    // Подбор самолета ввиде кейса по параметру сжигаемого топлива 
     // Добавление выбранного самолета в отдельную коллекцию для пользователя
 
     public void UserFuel(ArrayList<Airplane> airplanes, ArrayList<Airplane> userChoice) {
 
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("Выберете параметр потребления горючего подходящий вам" + "\n" +
+        System.out.println("Выбирете параметр потребления горючего подходящий вам" + "\n" +
                 "Программа подберет самолет подходящий параметру потребления горючего");
 
 
