@@ -3,36 +3,23 @@ package FinalExam.AirlineTask.Airline;
 import FinalExam.AirlineTask.Airline.AirPlanes.Airplane;
 
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
 import java.util.stream.Collectors;
 
 public class AirLineCompany {
-    // Коллекция объектов разработчика
+
     private ArrayList<Airplane> airplanes;
-    // Коллекия объектов пользователя
     private ArrayList<Airplane> userChoice;
 
 
-    private static final Comparator<Airplane> AIR_LINE_COMPANY_COMPARATOR = new Comparator<Airplane>() {
 
-
-
-        // Компаратор на сортировку объектов колекции по дальности полета
-
-        @Override
-        public int compare(Airplane o1, Airplane o2) {
-            return (int) (o1.getFlyingRange() - o2.getFlyingRange());
-        }
-
-    };
-
-
-    // Вывод объектов колецкии после сортировки
+    // Вывод объектов колецкии
 
     public void AirPlanesForEach(ArrayList<Airplane> airplanes) {
-        Collections.sort(airplanes, AIR_LINE_COMPANY_COMPARATOR);
         airplanes.stream().forEach(x -> System.out.println(x.toString()));
-
     }
 
 
@@ -113,28 +100,17 @@ public class AirLineCompany {
         }
 
 
+
     }
 
     // Вывод колекции объектов выбранных Пользователям
 
-    public void CollectUser(ArrayList<Airplane> userChoice) {
-        if(userChoice == null) {
+    public void CollectUser (ArrayList<Airplane> userChoice) {
 
-            System.out.println("Извините, но ваша коллекия пуста");
+        System.out.println("Выбранные вами самолеты : ");
 
-            return;
-        } else {
-
-            System.out.println("Выбранные вами самолеты : ");
-
-            Collections.sort(userChoice, AIR_LINE_COMPANY_COMPARATOR);
-
-            userChoice.stream().forEach(x -> System.out.println(x.toString()));
-        }
-
+        userChoice.stream().forEach(x-> System.out.println(x.toString()));
     }
-
-
 }
 
 
